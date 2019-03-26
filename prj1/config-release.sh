@@ -1,0 +1,1 @@
+meson_buildtype=release

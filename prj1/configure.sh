@@ -1,9 +1,10 @@
 #!/bin/bash
 
 set -ex
-meson_buildtype=debug
-builddir=out
+config=${1:-Default}
+. config-$config.sh
+builddir=out/$config
 mkdir -p $builddir
 cd $builddir
 rm -rf meson-private
-exec meson setup --buildtype=$meson_buildtype ..
+exec meson setup --buildtype=$meson_buildtype ../..
