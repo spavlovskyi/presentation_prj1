@@ -7,6 +7,7 @@ builddir=out/$config
 [[
 	configure.sh -nt $builddir/build.ninja
 	|| config-$config.sh -nt $builddir/build.ninja
+	|| conanfile.txt -nt $builddir/conaninfo.txt
 ]] && ./configure.sh $config
 cd $builddir
-exec ninja -v
+PKG_CONFIG_PATH=$PWD exec ninja -v test

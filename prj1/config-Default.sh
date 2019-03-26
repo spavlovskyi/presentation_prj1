@@ -1,1 +1,2 @@
+conan_buildtype=Debug
 meson_buildtype=debug

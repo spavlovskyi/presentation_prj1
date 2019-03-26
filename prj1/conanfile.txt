@@ -1,0 +1,12 @@
+[requires]
+OpenSSL/latest_1.1.1x@conan/stable
+
+[build_requires]
+boost_test/1.69.0@bincrafters/stable
+gsl_microsoft/2.0.0@bincrafters/stable
+
+[generators]
+pkg_config
+
+[options]
+*:shared=True

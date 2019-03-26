@@ -1,1 +1,2 @@
+conan_buildtype=Release
 meson_buildtype=release
