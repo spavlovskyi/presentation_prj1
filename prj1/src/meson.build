@@ -1,7 +1,7 @@
 includeRoot = include_directories ( '.' )
 
-
-if meson.get_compiler ( 'cpp' ).has_argument ( '-fdiagnostics-parseable-fixits' )
+compiler = meson.get_compiler ( 'cpp' )
+if compiler.has_argument ( '-fdiagnostics-parseable-fixits' )
     add_project_arguments (
         '-fdiagnostics-parseable-fixits',
         language : 'cpp'
