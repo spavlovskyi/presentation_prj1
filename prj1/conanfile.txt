@@ -1,5 +1,5 @@
 [requires]
-OpenSSL/latest_1.1.1x@conan/stable
+OpenSSL/1.0.2r@local/stable
 
 [build_requires]
 boost_test/1.69.0@bincrafters/stable
@@ -10,6 +10,7 @@ pkg_config
 
 [options]
 *:shared=True
+OpenSSL:fips=True
 
 [imports]
 ., *.dll -> ./bin @ keep_path=False

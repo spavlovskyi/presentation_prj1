@@ -7,11 +7,11 @@ namespace hash {
 	std :: array < char, 64 > hexSha256 ( Bytes src ) {
 		struct EVP_MD_CTX_deleter {
 			void operator() ( EVP_MD_CTX * p ) const {
-				EVP_MD_CTX_free ( p );
+				EVP_MD_CTX_destroy ( p );
 			}
 		};
 		std :: unique_ptr < EVP_MD_CTX, EVP_MD_CTX_deleter > p {
-			EVP_MD_CTX_new ( )
+			EVP_MD_CTX_create ( )
 		};
 		auto check = [ ] ( int r ) {
 			if ( r != 1 )

@@ -1,7 +1,12 @@
+#include <hash/fipsmode.hpp>
 #include <hash/hash.hpp>
 #include <boost/test/unit_test.hpp>
 
 BOOST_AUTO_TEST_SUITE ( hash )
+
+BOOST_AUTO_TEST_CASE ( fips ) {
+	BOOST_CHECK_NO_THROW ( hash :: enableFipsMode ( ) );
+}
 
 BOOST_AUTO_TEST_CASE ( hello ) {
 	static char ref [ ] = "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824";

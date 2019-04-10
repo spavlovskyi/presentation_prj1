@@ -1,3 +1,4 @@
+#include <hash/fipsmode.hpp>
 #include <hash/hash.hpp>
 #include <fstream>
 #include <iostream>
@@ -7,6 +8,7 @@ int main ( int argc, const char * const argv [ ] ) {
 		std :: cerr << "usage: " << argv [ 0 ] << " filename\n";
 		return EXIT_FAILURE;
 	}
+	hash :: enableFipsMode ( );
 	std :: ifstream is {
 		argv [ 1 ],
 		std :: ios :: binary

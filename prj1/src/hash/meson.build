@@ -12,6 +12,7 @@ endif
 
 hash = static_library (
     'hash',
+    'fipsmode.cpp',
     'hash.cpp',
     cpp_args : hash_cpp_args,
     dependencies : hash_deps,
