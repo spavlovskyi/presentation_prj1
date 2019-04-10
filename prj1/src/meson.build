@@ -15,4 +15,6 @@ main = executable (
     'main',
     'main.cpp',
     dependencies : hash_dep,
+    install : true,
+    install_rpath : '$ORIGIN',
 )

@@ -8,4 +8,4 @@ mkdir -p $builddir
 cd $builddir
 conan install ../.. --build=missing -s build_type=$conan_buildtype -s compiler.libcxx=libstdc++11
 rm -rf meson-private
-PKG_CONFIG_PATH=$PWD exec meson setup --buildtype=$meson_buildtype ../..
+PKG_CONFIG_PATH=$PWD exec meson setup --buildtype=$meson_buildtype --prefix=$PWD ../..

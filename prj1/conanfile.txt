@@ -14,3 +14,4 @@ OpenSSL:fips=True
 
 [imports]
 ., *.dll -> ./bin @ keep_path=False
+., *libcrypto.so.1.0.0 -> ./bin @ keep_path=False

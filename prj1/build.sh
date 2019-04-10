@@ -10,4 +10,4 @@ builddir=out/$config
 	|| conanfile.txt -nt $builddir/conaninfo.txt
 ]] && ./configure.sh $config
 cd $builddir
-PKG_CONFIG_PATH=$PWD exec ninja -v test
+PKG_CONFIG_PATH=$PWD exec ninja -v test install

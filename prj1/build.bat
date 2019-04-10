@@ -13,3 +13,7 @@ cd %builddir%
 set PATH=%cd%\bin;%PATH%
 %build_command%
 if %errorlevel% neq 0 exit /b %errorlevel%
+meson test -v
+if %errorlevel% neq 0 exit /b %errorlevel%
+meson install --no-rebuild --only-changed
+if %errorlevel% neq 0 exit /b %errorlevel%
